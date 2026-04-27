@@ -7,7 +7,7 @@ type CompanyConfig =
   | { type: "initials"; initials: string; color: string };
 
 const companyConfig: Record<string, CompanyConfig> = {
-  Globant: { type: "logo", src: "/logo-globant.png", width: 72, height: 16 },
+  Globant: { type: "logo", src: "/logo-globant.png", width: 80, height: 18 },
   GM2: { type: "initials", initials: "GM", color: "#D4A853" },
   "Survey Kiwi": { type: "initials", initials: "SK", color: "#4CAF7D" },
   "Solutions Malls": { type: "initials", initials: "SM", color: "#9B8EA8" },
@@ -22,7 +22,7 @@ export function CompanyBadge({ company }: { company: string }) {
 
   if (config.type === "logo") {
     return (
-      <div className="h-9 px-2.5 rounded-md flex items-center justify-center shrink-0 bg-white">
+      <div className="h-10 px-3 rounded-lg flex items-center justify-center shrink-0 bg-white">
         <Image
           src={config.src}
           alt={company}
@@ -36,7 +36,7 @@ export function CompanyBadge({ company }: { company: string }) {
 
   return (
     <div
-      className="w-9 h-9 rounded-md flex items-center justify-center shrink-0 text-[10px] font-mono font-medium border"
+      className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 text-[11px] font-mono font-medium border"
       style={{
         borderColor: `${config.color}40`,
         backgroundColor: `${config.color}12`,

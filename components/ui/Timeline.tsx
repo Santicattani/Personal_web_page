@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CompanyBadge } from "./CompanyBadge";
 import type { ExperienceEntry } from "@/content/experience";
 
 function TimelineEntry({ entry, index }: { entry: ExperienceEntry; index: number }) {
@@ -11,24 +10,19 @@ function TimelineEntry({ entry, index }: { entry: ExperienceEntry; index: number
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="relative pl-6 border-l border-[#1F1F1F]"
+      className="relative pl-8 border-l border-[#1F1F1F]"
     >
-      <div className="absolute -left-1.5 top-2 w-3 h-3 rounded-full border-2 border-[#D4A853] bg-[#0C0C0C]" />
+      <div className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full border-2 border-[#D4A853] bg-[#0C0C0C]" />
 
-      <div className="flex items-start gap-3 mb-3">
-        <CompanyBadge company={entry.company} />
-        <div>
-          <div className="flex items-center gap-2 flex-wrap">
-            <h3 className="text-[#F2F2F2] font-light text-base leading-tight">{entry.role}</h3>
-            <span className="font-mono text-xs text-[#D4A853]">{entry.period}</span>
-          </div>
-          <p className="text-sm text-[#888888] mt-0.5">
-            {entry.company} · {entry.location}
-          </p>
-        </div>
+      <div className="flex items-baseline gap-3 flex-wrap mb-1">
+        <h3 className="text-[#F2F2F2] font-light text-base">{entry.role}</h3>
+        <span className="font-mono text-xs text-[#D4A853]">{entry.period}</span>
       </div>
+      <p className="text-sm text-[#888888] mb-4">
+        {entry.company} · {entry.location}
+      </p>
 
-      <ul className="space-y-1.5 mb-4 ml-12">
+      <ul className="space-y-1.5 mb-4">
         {entry.highlights.map((h, i) => (
           <li key={i} className="text-sm text-[#888888] leading-relaxed flex gap-2">
             <span className="text-[#D4A853] shrink-0 mt-0.5">—</span>
@@ -38,7 +32,7 @@ function TimelineEntry({ entry, index }: { entry: ExperienceEntry; index: number
       </ul>
 
       {entry.subEntries && (
-        <div className="ml-12 space-y-5">
+        <div className="space-y-4">
           {entry.subEntries.map((sub, i) => (
             <div key={i} className="border border-[#1F1F1F] rounded-lg p-4 bg-[#141414]">
               <div className="flex items-start justify-between gap-3 mb-1">
