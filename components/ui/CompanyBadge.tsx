@@ -22,13 +22,13 @@ export function CompanyBadge({ company }: { company: string }) {
 
   if (config.type === "logo") {
     return (
-      <div className="h-10 px-3 rounded-lg flex items-center justify-center shrink-0 bg-white">
+      <div className="h-10 px-3 rounded-lg flex items-center justify-center shrink-0 border border-[#1F1F1F] bg-[#141414]">
         <Image
           src={config.src}
           alt={company}
           width={config.width}
           height={config.height}
-          className="object-contain"
+          className="object-contain brightness-0 invert"
         />
       </div>
     );
