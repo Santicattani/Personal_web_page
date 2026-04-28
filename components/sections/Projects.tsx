@@ -7,29 +7,6 @@ import { projects } from "@/content/projects";
 
 const githubProjects: GitHubProject[] = [
   {
-    title: "AutomateNow",
-    subtitle: "automatenow.vercel.app",
-    description:
-      "Landing page for an AI & automation consultancy. Showcases 6 service lines, case studies, and a consultative approach to process automation for SMBs.",
-    github: "https://github.com/Santicattani/AutomateNow_Web",
-    link: "https://automate-now-web.vercel.app",
-    languages: [
-      { name: "TypeScript", percent: 44, color: "#3178C6" },
-      { name: "HTML", percent: 50, color: "#E44D26" },
-      { name: "CSS", percent: 5, color: "#563D7C" },
-      { name: "JavaScript", percent: 1, color: "#F1E05A" },
-    ],
-    features: [
-      { title: "AI Customer Support", desc: "WhatsApp, web & social — automated intelligent responses" },
-      { title: "Lead Qualification", desc: "Automatic prospect filtering; team receives only qualified leads" },
-      { title: "Admin Automation", desc: "Billing, onboarding & approvals removed from manual backoffice" },
-      { title: "Tool Integration", desc: "CRM, forms, email & spreadsheets connected end-to-end" },
-      { title: "Auto Reports", desc: "Real-time dashboards & management reports that generate themselves" },
-      { title: "Sales Automation", desc: "Sales flows, follow-ups & proposals on autopilot" },
-    ],
-    tags: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS", "Vercel"],
-  },
-  {
     title: "Forrajes Platform",
     subtitle: "Full-stack agro platform · FastAPI + Next.js",
     description:
