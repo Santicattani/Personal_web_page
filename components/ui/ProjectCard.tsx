@@ -5,18 +5,28 @@ import { Tag } from "./Tag";
 import type { Project } from "@/content/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
+  const linkUrl = project.link ?? project.github;
+  const isGithub = !project.link && !!project.github;
+
   return (
     <div className="group border border-[#1F1F1F] rounded-lg p-5 bg-[#141414] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#2A2A2A] flex flex-col h-full">
       <div className="flex items-start justify-between gap-3 mb-2">
         <h3 className="text-[#F2F2F2] font-light leading-snug text-sm">{project.title}</h3>
-        {project.link && (
+        {linkUrl && (
           <a
-            href={project.link}
+            href={linkUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 text-[#888888] hover:text-[#D4A853] transition-colors"
+            className="shrink-0 text-[#888888] hover:text-[#D4A853] transition-colors flex items-center gap-1"
+            title={isGithub ? "Ver en GitHub" : "Ver proyecto"}
           >
-            <ExternalLink size={14} />
+            {isGithub ? (
+              <span className="font-mono text-[10px] border border-[#1F1F1F] rounded px-1.5 py-0.5 hover:border-[#D4A853]/30 hover:text-[#D4A853] transition-colors">
+                GitHub
+              </span>
+            ) : (
+              <ExternalLink size={14} />
+            )}
           </a>
         )}
       </div>

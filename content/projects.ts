@@ -3,6 +3,7 @@ export type Project = {
   description: string;
   tags: string[];
   link?: string;
+  github?: string;
   type: "professional" | "personal";
   metric?: string;
 };
@@ -40,16 +41,18 @@ export const projects: Project[] = [
   },
   {
     type: "personal",
-    title: "AI Personal Finance Assistant",
+    title: "AutomateNow",
     description:
-      "Prototype personal finance tool powered by an LLM, integrating bank transaction data for natural-language queries and automated spend categorization.",
-    tags: ["AI", "LLM", "Fintech", "Automation"],
+      "Landing page for an AI & automation consultancy. Built with Next.js and Framer Motion — animated particle canvas hero, full sections covering services, process, and case studies.",
+    tags: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+    github: "https://github.com/Santicattani/AutomateNow_Web",
   },
   {
     type: "personal",
-    title: "PM Automation Toolkit",
+    title: "Forrajes Platform",
     description:
-      "Collection of scripts and prompt templates automating recurring PM tasks: status report generation, risk register updates, and sprint retrospective summaries.",
-    tags: ["Automation", "Python", "Prompting", "Productivity"],
+      "Full-stack platform for alfalfa and forage producers in Argentina. REST API in FastAPI with real-time pricing from clusterdealfalfa.com.ar, weather data, field management, and market tracking.",
+    tags: ["FastAPI", "Python", "Next.js", "REST API", "Agro-tech"],
+    github: "https://github.com/Santicattani/Forrajes-Project",
   },
 ];
