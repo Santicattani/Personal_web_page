@@ -3,18 +3,18 @@
 import { motion } from "framer-motion";
 import { Download, ArrowDown } from "lucide-react";
 import { meta } from "@/content/meta";
+import { MeshGradient } from "@paper-design/shaders-react";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Subtle grid background */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "linear-gradient(#F2F2F2 1px, transparent 1px), linear-gradient(90deg, #F2F2F2 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-        }}
+      {/* MeshGradient background */}
+      <MeshGradient
+        style={{ position: "absolute", inset: 0 }}
+        width="100%"
+        height="100%"
+        colors={["#0C0C0C", "#16120A", "#141414", "#1A1208"]}
+        speed={0.25}
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center sm:text-left">
