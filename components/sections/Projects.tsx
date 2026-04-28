@@ -7,6 +7,27 @@ import { projects } from "@/content/projects";
 
 const githubProjects: GitHubProject[] = [
   {
+    title: "Personal Portfolio",
+    subtitle: "santicattani.vercel.app",
+    description:
+      "This site. Built from scratch with Next.js 16, Tailwind CSS v4 and Framer Motion. Dark design system, scroll animations, interactive automation diagrams, and GitHub project cards.",
+    github: "https://github.com/Santicattani/Personal_web_page",
+    languages: [
+      { name: "TypeScript", percent: 92, color: "#3178C6" },
+      { name: "CSS", percent: 5, color: "#563D7C" },
+      { name: "JavaScript", percent: 3, color: "#F1E05A" },
+    ],
+    features: [
+      { title: "Dark design system", desc: "Custom color palette (Dark Slate + Amber) with Tailwind CSS v4 tokens" },
+      { title: "Scroll animations", desc: "Framer Motion fade-in and stagger effects on every section" },
+      { title: "Agent flow diagram", desc: "Interactive multi-agent architecture visualization for 311 PM" },
+      { title: "CRM pipeline", desc: "5-stage Make.com automation pipeline rendered in pure CSS" },
+      { title: "GitHub cards", desc: "Language breakdown bars and feature grids pulled from repo data" },
+      { title: "Static export", desc: "Fully static — zero server, deploys to Vercel in seconds" },
+    ],
+    tags: ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Framer Motion", "Vercel"],
+  },
+  {
     title: "Forrajes Platform",
     subtitle: "Full-stack agro platform · FastAPI + Next.js",
     description:
