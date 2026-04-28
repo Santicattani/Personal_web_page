@@ -3,13 +3,13 @@
 import Image from "next/image";
 
 type CompanyConfig =
-  | { type: "logo"; src: string; width: number; height: number }
+  | { type: "logo"; src: string; width: number; height: number; invert?: boolean }
   | { type: "initials"; initials: string; color: string };
 
 const companyConfig: Record<string, CompanyConfig> = {
-  Globant: { type: "logo", src: "/logo-globant.png", width: 80, height: 18 },
+  Globant: { type: "logo", src: "/logo-globant.png", width: 80, height: 18, invert: true },
   GM2: { type: "initials", initials: "GM", color: "#D4A853" },
-  "Survey Kiwi": { type: "initials", initials: "SK", color: "#4CAF7D" },
+  "Survey Kiwi": { type: "logo", src: "/logo-surveykiwi.png", width: 90, height: 20, invert: false },
   "Solutions Malls": { type: "initials", initials: "SM", color: "#9B8EA8" },
 };
 
@@ -28,7 +28,7 @@ export function CompanyBadge({ company }: { company: string }) {
           alt={company}
           width={config.width}
           height={config.height}
-          className="object-contain brightness-0 invert"
+          className={`object-contain ${config.invert ? "brightness-0 invert" : ""}`}
         />
       </div>
     );
