@@ -11,7 +11,7 @@ const facts = [
   { label: "Location", value: meta.location },
 ];
 
-const companies = ["Globant", "GM2", "Survey Kiwi", "Solutions Malls"];
+const companies = ["Globant", "TELUS Digital", "Survey Kiwi", "Solutions Malls"];
 
 export function About() {
   return (

@@ -8,7 +8,7 @@ type CompanyConfig =
 
 const companyConfig: Record<string, CompanyConfig> = {
   Globant: { type: "logo", src: "/logo-globant.png", width: 80, height: 18, invert: true },
-  GM2: { type: "initials", initials: "GM", color: "#D4A853" },
+  "TELUS Digital": { type: "logo", src: "/logo-telusdigital.png", width: 100, height: 14, invert: true },
   "Survey Kiwi": { type: "logo", src: "/logo-surveykiwi.png", width: 90, height: 20, invert: false },
   "Solutions Malls": { type: "logo", src: "/logo-solutionsmalls.png", width: 24, height: 32, invert: true },
 };

@@ -49,7 +49,7 @@ export const experience: ExperienceEntry[] = [
     ],
   },
   {
-    company: "GM2",
+    company: "TELUS Digital",
     role: "IT Project Manager",
     period: "Sep 2023 — Sep 2024",
     location: "Argentina",
