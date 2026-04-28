@@ -29,7 +29,7 @@ export function Automations() {
           <p className="font-mono text-xs text-[#D4A853] uppercase tracking-widest mb-1">
             Automations
           </p>
-          <p className="text-[#888888] text-sm font-light">n8n · AI Agents · Make</p>
+          <p className="text-[#888888] text-sm font-light">n8n · AI Agents</p>
         </motion.div>
 
         {/* Featured project */}
